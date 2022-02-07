@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+html {
+	height:100%;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #ffffff;
+	font-size: 30px;
+	font-family: "Helvetica";
+	color: #000;
+	letter-spacing: em;
+	line-height: 1.2em;
+	height: 100%;
+	}
+
+P {
+    text-indent: 0em;
+		text-align: left;
+		width: 30%;
+		margin-left: auto;
+		margin-right: 0;
+}
+
+A {
+	text-decoration: none;
+	border-bottom: 1.75px solid #111;
+	outline: none;
+}
+
+A:link {
+	color: #000;
+}
+
+A:hover, A:visited {
+	color: #f0d;
+}
+
+img {
+	border: 0;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+
+#wrapper {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#wrapper:after {
+	display:block;
+	clear:both;
+	content:"";
+	height:0;
+	overflow:hidden;
+}
+
+#left {
+	float:left;
+	width: 50%;
+	height:100%;
+	overflow-y: scroll;
+	background-color: #ffffff;
+}
+
+#right {
+	float:left;
+	width: 50%;
+	height:100%;
+	overflow-y: scroll;
+	background-color: #ffffff;
+}
+
+#leftcontent {
+	margin: 10px;
+}
+
+#leftbottom {
+	margin: 20px;
+}
+
+#rightcontent {
+	margin: 0px;
+}
+
+#content {
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	overflow: auto;
+	z-index: 0;
+	/*vertical-align: top;*/
+	max-width: 1000px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding-left: 0em;
+	margin-bottom: 0.15em;
+	text-indent: 1em;
+}
+
+li:before {
+  content: "";
+  padding-right: 10px;
+}
+
+.image {
+	width: 100%;
+	border: none;
+	display: block;
+	border: none;
+	position:relative;
+	margin-bottom: 0em;
+	}
+
+.caption {
+  font-family: "Helvetica";
+	font-size: 14px;
+	line-height: 1.2em;
+	vertical-align: top;
+	text-align: left;
+	width: 30%;
+	margin-left: auto;
+	margin-right: 0;
+	}
+
+.divider{
+		text-align: left;
+	}
+
+@media screen and (max-width: 876px) {
+			#left {
+				width: 100%;
+				height:auto;
+			}
+
+			#right {
+				width: 100%;
+				height: auto;
+			}
+
+			#leftcontent {
+				margin: 15px;
+			}
+
+			#leftbottom {
+				margin: 0 15px 40px 15px!important;
+			}
+
+			#rightcontent {
+				margin: 40px 30px 40px 30px!important;
+			}
+
+  }
