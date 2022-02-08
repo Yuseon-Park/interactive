@@ -63,18 +63,18 @@ img {
 
 #left {
 	float:left;
-	width: 50%;
+	width: 80%;
 	height:100%;
 	overflow-y: scroll;
-	background-color: #018ae6;
+	background-color: none;
 }
 
 #right {
 	float:left;
-	width: 50%;
+	width: 20%;
 	height:100%;
 	overflow-y: scroll;
-	background-color: #99b53e;
+	background-color: none;
 }
 
 #leftcontent {
@@ -109,12 +109,12 @@ ul {
 li {
   padding-left: 0em;
 	margin-bottom: 0.15em;
-	text-indent: 1em;
+	text-indent: 0em;
 }
 
 li:before {
   content: "";
-  padding-right: 10px;
+  padding-right: 1px;
 }
 
 .image {
