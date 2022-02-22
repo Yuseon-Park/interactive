@@ -1,0 +1,330 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+  display: flex;	/*flex 컨테이너 생성*/
+  flex-direction: column;	/*default value*/
+  border: none;
+}
+
+.box {
+  border: none;
+}
+
+.a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(238, 254, 207);
+  width: 50vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid black;
+  overflow-y: overlay;
+}
+
+.b {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(238, 254, 207);
+  width: 50vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid black;
+  overflow-y: overlay;
+}
+
+.c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(238, 254, 207);
+  width: 50vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid black;
+  overflow-y: overlay;
+}
+
+@font-face {
+  font-family: "ChurchwardNewstypeLight-Regular";
+  src: url('assets/webFonts/ChurchwardNewstypeLightRegular/font.woff2') format('woff2'), url('assets/webFonts/ChurchwardNewstypeLightRegular/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: "ChurchwardNewstypeBook-Regular";
+  src: url('assets/webFonts/ChurchwardNewstypeBookRegular/font.woff2') format('woff2'), url('assets/webFonts/ChurchwardNewstypeBookRegular/font.woff') format('woff');
+}
+
+body {
+    background-color: black;
+    color: black;
+    font-family: "ChurchwardNewstypeLight-Regular";
+    font-size: 22px;
+    letter-spacing: 0.8px;
+    line-height: 1.4;
+    text-align: left;
+    overflow: hidden;
+}
+
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(238, 254, 207);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+div.indent {
+  text-indent: 10%;
+}
+
+div.container {
+    background-color: rgb(238, 254, 207);
+    width: 100vw;
+    height: 100vh;
+}
+
+div..site-bg {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: .6s opacity;
+}
+
+div.left {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(238, 254, 207);
+    width: 50vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    overflow-y: overlay;
+}
+
+div.right {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 50vw;
+    height: 100vh;
+    left: 50vw;
+    top: 0;
+    overflow-y: auto;
+    overflow: hidden;
+}
+
+div.clip {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16%;
+    height: 9%;
+    top: 3vh;
+    left: 1.5vw;
+    border-radius: 12px;
+    box-shadow: 5px 10px 18px #eaebea;
+}
+
+div.text-yp {
+    margin-top: 5%;
+    width: 90%;
+    padding-left: 10%;
+}
+
+div.text-ai {
+    margin-top: 5%;
+    width: 90%;
+}
+
+div.intro {
+    font-family: "ChurchwardNewstypeBook-Regular";
+    font-size: 14px;
+    color: black;
+    letter-spacing: 0.8px;
+    line-height: 1.3em;
+    margin-top: 5%;
+    width: 90%;
+    padding-left: 15%;
+	  vertical-align: top;
+	  text-align: left;
+}
+
+div.caption {
+    font-family: "ChurchwardNewstypeBook-Regular";
+    font-size: 14px;
+    color: #969696;
+    letter-spacing: 0.8px;
+    line-height: 1.3em;
+    margin-top: 5%;
+    width: 60%;
+    padding-left: 25%;
+	  vertical-align: top;
+	  text-align: left;
+}
+
+div.text-video{
+    position: fixed;
+    bottom: 1.5vh;
+    left: 1.5vw;
+    color: #125f13;
+    width: 100%;
+}
+
+
+div.link {
+    font-family: "ChurchwardNewstypeBook-Regular";
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    line-height: 1.3em;
+    margin-top: 5%;
+    width: 60%;
+    color: #125f13;
+    cursor: pointer;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-radius: 12px;
+}
+
+img {
+    width: 90%;
+    height: auto;
+    margin-top: 5%;
+    border-radius: 12px;
+    box-shadow: 5px 10px 18px rgb(238, 254, 207);
+}
+
+.entry {
+    height: 100%;
+    width: 90vw;
+    position: fixed;
+    justify-content: left;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    z-index: 4;
+    color: black;
+    display: block;
+}
+
+img.static {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    mix-blend-mode: none; /* multiply */
+    z-index: 3;
+    background-color: rgb(238, 254, 207);
+    display: block;
+}
+
+.entry-bg {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+    opacity: 0.9;
+    background-color: white;
+}
+
+#progressBar {
+    background-color: transparent;
+    width: 50%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    border: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#progress {
+    background-color:#eaebea;
+    height: 50px;
+    display:inline-block;
+    border: none;
+    z-index: 1;
+    opacity: .9;
+}
+
+.number {
+    cursor: pointer;
+}
+
+.number:hover {
+    color: black;
+    -webkit-text-stroke: 1px;
+}
+
+
+@media screen and (max-width: 876px) {
+			#left {
+				width: 100%;
+				height:auto;
+			}
+
+			#right {
+				width: 100%;
+				height: auto;
+			}
+
+			#leftcontent {
+				margin: 15px;
+			}
+
+			#leftbottom {
+				margin: 0 15px 40px 15px!important;
+			}
+
+			#rightcontent {
+				margin: 40px 30px 40px 30px!important;
+			}
+
+  }
