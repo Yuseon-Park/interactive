@@ -75,6 +75,28 @@ body {
     overflow: hidden;
 }
 
+/*scrollbar*/
+/* width */
+::-webkit-scrollbar {
+  width: 50px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(238, 254, 207);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #eaebea;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(238, 254, 207);
+}
+
+
 a:link {
   color: black;
   background-color: transparent;
