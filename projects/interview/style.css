@@ -1,59 +1,3 @@
-* {
-    box-sizing: border-box;
-    outline: none;
-    margin: 0;
-    padding: 0;
-}
-
-#container {
-  display: flex;	/*flex 컨테이너 생성*/
-  flex-direction: column;	/*default value*/
-  border: none;
-}
-
-.box {
-  border: none;
-}
-
-.a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgb(238, 254, 207);
-  width: 50vw;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  border-bottom: 1px solid black;
-  overflow-y: overlay;
-}
-
-.b {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgb(238, 254, 207);
-  width: 50vw;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  border-bottom: 1px solid black;
-  overflow-y: overlay;
-}
-
-.c {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgb(238, 254, 207);
-  width: 50vw;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  border-bottom: 1px solid black;
-  overflow-y: overlay;
-}
-
 @font-face {
   font-family: "ChurchwardNewstypeLight-Regular";
   src: url('assets/webFonts/ChurchwardNewstypeLightRegular/font.woff2') format('woff2'), url('assets/webFonts/ChurchwardNewstypeLightRegular/font.woff') format('woff');
@@ -64,16 +8,101 @@
   src: url('assets/webFonts/ChurchwardNewstypeBookRegular/font.woff2') format('woff2'), url('assets/webFonts/ChurchwardNewstypeBookRegular/font.woff') format('woff');
 }
 
+@font-face {
+  font-family: "franklin-gothic-book";
+  src:url('assets/webFonts/franklin-gothic-book.woff2') format("woff2"),url('assets/webFonts/franklin-gothic-book.woff') format("woff");
+}
+
+@font-face {
+  font-family: "franklin-gothic-medium";
+  src:url('assets/webFonts/franklin-gothic-medium.woff2') format("woff2"),url('assets/webFonts/franklin-gothic-medium.woff') format("woff");
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: black;
-    color: black;
+    background-color: #191919;
+    color: #191919;
     font-family: "ChurchwardNewstypeLight-Regular";
     font-size: 22px;
-    letter-spacing: 0.8px;
-    line-height: 1.4;
+    line-height: 27px;
+    letter-spacing: 0.4px;
     text-align: left;
     overflow: hidden;
 }
+
+.entry {
+    height: 100%;
+    width: 90vw;
+    position: fixed;
+    justify-content: left;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    z-index: 4;
+    color: #191919;
+    display: block;
+}
+
+.section {
+  padding: 0px;
+  border-bottom: 2px solid #191919;
+}
+
+#nav {
+  position: fixed;
+  text-align: left;
+  overflow: auto;
+  justify-content: left;
+  font-family: "franklin-gothic-medium";
+  font-size: 20px;
+  right: 0px;
+  width: 100px;
+  height: auto;
+  padding: 0px;
+  background: rgb(0, 0, 255);
+  z-index: 101;
+  border-radius: 12px;
+}
+
+
+
+.button {
+  display: flex;  
+  width: 166px;
+  height: 42px;
+  padding-bottom: 9px;
+  float: none;
+  clear: none;
+  font-family: "franklin-gothic-medium";
+  font-size: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid #191919;
+  background-color: transparent;
+  font-family: Macguffin03, sans-serif;
+  color: #191919;
+  font-size: 22px;
+  text-align: center;
+  text-decoration: none;
+}
+
 
 /*scrollbar*/
 /* width */
@@ -83,7 +112,7 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgb(238, 254, 207);
+  background: #e5d895;;
 }
 
 /* Handle */
@@ -93,27 +122,29 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(238, 254, 207);
+  background: #e5d895;;
 }
-
 
 a:link {
-  color: black;
+  color: #191919;
   background-color: transparent;
   text-decoration: none;
 }
+
 a:visited {
-  color: black;
+  color: #191919;
   background-color: transparent;
   text-decoration: none;
 }
+
 a:hover {
-  color: rgb(238, 254, 207);
+  color: #e5d895;;
   background-color: transparent;
   text-decoration: none;
 }
+
 a:active {
-  color: black;
+  color: #191919;
   background-color: transparent;
   text-decoration: none;
 }
@@ -123,7 +154,7 @@ div.indent {
 }
 
 div.container {
-    background-color: rgb(238, 254, 207);
+    background-color: #e5d895;;
     width: 100vw;
     height: 100vh;
 }
@@ -143,12 +174,14 @@ div.left {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(238, 254, 207);
+    background-color: #e5d895;;
     width: 50vw;
     height: 100vh;
     left: 0;
     top: 0;
-    overflow-y: overlay;
+    overflow-y: scroll;
+    overflow-x: hidden;
+	  -webkit-overflow-scrolling: touch;
 }
 
 div.right {
@@ -157,12 +190,16 @@ div.right {
     flex-direction: column;
     align-items: center;
     background-color: white;
+    background-image: repeating-linear-gradient(to bottom, #191919, #191919 2px, transparent 0, transparent 200px), repeating-linear-gradient(to right,#191919, #191919 2px, transparent 0, transparent 200px);
+    background-position: 20px 20px;
     width: 50vw;
     height: 100vh;
     left: 50vw;
     top: 0;
     overflow-y: auto;
     overflow: hidden;
+	  -webkit-overflow-scrolling: touch;
+    background-image:white;
 }
 
 div.clip {
@@ -172,10 +209,21 @@ div.clip {
     align-items: center;
     width: 16%;
     height: 9%;
-    top: 3vh;
+    top: 10vh;
     left: 1.5vw;
-    border-radius: 12px;
+    border-radius: 0px;
     box-shadow: 5px 10px 18px #eaebea;
+}
+
+div.title {
+    font-family: "ChurchwardNewstypeLight-Regular";
+    font-size: 48px;
+    color: #191919;
+    letter-spacing: 0.8px;
+    line-height: 1.3em;
+    margin-top: 20px;
+    width: 90%;
+    padding-left: 20px;
 }
 
 div.text-yp {
@@ -187,14 +235,15 @@ div.text-yp {
 div.text-ai {
     margin-top: 5%;
     width: 90%;
+    padding-left: 20px;
 }
 
 div.intro {
-    font-family: "ChurchwardNewstypeBook-Regular";
-    font-size: 14px;
-    color: black;
-    letter-spacing: 0.8px;
-    line-height: 1.3em;
+    font-family: "franklin-gothic-medium";
+    font-size: 22px;
+    line-height: 27px;
+    color: #191919;
+    letter-spacing: 0.2px;
     margin-top: 5%;
     width: 90%;
     padding-left: 15%;
@@ -203,13 +252,12 @@ div.intro {
 }
 
 div.caption {
-    font-family: "ChurchwardNewstypeBook-Regular";
-    font-size: 14px;
-    color: #969696;
-    letter-spacing: 0.8px;
-    line-height: 1.3em;
-    margin-top: 5%;
-    width: 60%;
+    font-family: "franklin-gothic-medium";
+    font-size: 18px;
+    line-height: 22px;
+    color: #191919;
+    margin-top: 20px;
+    width: 80%;
     padding-left: 25%;
 	  vertical-align: top;
 	  text-align: left;
@@ -223,9 +271,8 @@ div.text-video{
     width: 100%;
 }
 
-
 div.link {
-    font-family: "ChurchwardNewstypeBook-Regular";
+    font-family: "franklin-gothic-medium";
     font-size: 14px;
     letter-spacing: 0.8px;
     line-height: 1.3em;
@@ -239,28 +286,15 @@ video {
     width: 100%;
     height: auto;
     position: relative;
-    border-radius: 12px;
+    border-radius: 0px;
 }
 
 img {
-    width: 90%;
-    height: auto;
     margin-top: 5%;
-    border-radius: 12px;
-    box-shadow: 5px 10px 18px rgb(238, 254, 207);
-}
-
-.entry {
-    height: 100%;
-    width: 90vw;
-    position: fixed;
-    justify-content: left;
-    left: 0;
-    top: 0;
-    padding: 20px;
-    z-index: 4;
-    color: black;
-    display: block;
+    width: 80%;
+    height: auto;
+    border-radius: 0px;
+    box-shadow: 5px 10px 18px #e5d895;;
 }
 
 img.static {
@@ -275,7 +309,7 @@ img.static {
     background-size: contain;
     mix-blend-mode: none; /* multiply */
     z-index: 3;
-    background-color: rgb(238, 254, 207);
+    background-color: #e5d895;;
     display: block;
 }
 
@@ -321,10 +355,9 @@ img.static {
 }
 
 .number:hover {
-    color: black;
+    color: #191919;
     -webkit-text-stroke: 1px;
 }
-
 
 @media screen and (max-width: 876px) {
 			#left {
