@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Keboard Score</title>
+    <link rel="stylesheet" type="text/css" ref="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+		<script src="index.js"></script>
+<style>
+
+@font-face {
+  font-family: "boo-regular";
+  src: url('boo-regular.woff2') format('woff2'), url('boo-regular.woff') format('woff');
+}
+
+body {
+    background-color: #eaebea;
+    color: black;
+    font-family: "boo-regular";
+    font-size: 22px;
+    letter-spacing: 0px;
+    line-height: 1.1;
+    text-align: left;
+    overflow-y: display;
+}
+
+.fx {
+  -webkit-display: flex;
+  display: flex;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.fx > div {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.fx > div:first-child {
+   width: 50%;
+}
+
+.flex {
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+#test-target {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #a100ff;
+  font-family: "boo-regular";
+  font-size: 22px;
+  letter-spacing: 10px;
+  line-height: 1.1;
+  text-align: left;
+}
+
+</style>
+</head>
+
+<body>
+<div class="fx">
+  <div>
+    🎼<br>
+    Sound On<br>
+    Press a key on the keyboard in the input field to play with score.<br><br>
+    Now working key type:<br> A g C o m i n g ...<br><br>
+    <textarea rows="1" name="test-target" id="test-target"></textarea>
+  </div>
+  <div class="flex">
+    <pre id="console-log"></pre>
+  </div>
+</div>
+
+	   <!--Sounds-->
+<div class="Sounds">
+      <audio id="A" src="audio/A.mp3" preload="auto"></audio>
+      <audio id="g" src="audio/g.mp3" preload="auto"></audio>
+      <audio id="C" src="audio/C.mp3" preload="auto"></audio>
+      <audio id="o" src="audio/o.mp3" preload="auto"></audio>
+      <audio id="m" src="audio/m.mp3" preload="auto"></audio>
+      <audio id="i" src="audio/i.mp3" preload="auto"></audio>
+      <audio id="n" src="audio/n.mp3" preload="auto"></audio>
+      <audio id="." src="audio/(.).mp3" preload="auto"></audio>
+</div>
+
+
+
+</body>
+</html>
