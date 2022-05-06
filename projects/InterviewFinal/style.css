@@ -1,0 +1,404 @@
+@font-face {
+  font-family: "ChurchwardNewstypeLight-Regular";
+  src: url('assets/webFonts/ChurchwardNewstypeLightRegular/font.woff2') format('woff2'), url('assets/webFonts/ChurchwardNewstypeLightRegular/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: "ChurchwardNewstypeBook-Regular";
+  src: url('assets/webFonts/ChurchwardNewstypeBookRegular/font.woff2') format('woff2'), url('assets/webFonts/ChurchwardNewstypeBookRegular/font.woff') format('woff');
+}
+
+*,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "ChurchwardNewstypeLight-Regular";
+    font-size: 20px;
+    color: #0B0B0B;
+    line-height: 26px;
+    letter-spacing: 0.4px;
+    overflow: hidden;
+}
+
+.entry {
+    height: 100%;
+    width: 90vw;
+    position: fixed;
+    justify-content: left;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    z-index: 4;
+    color: #0B0B0B;
+    display: block;
+}
+
+.section {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+/* scroll */
+.scroll-container {
+  -moz-animation: my-animation 500s linear infinite;
+  -webkit-animation: my-animation 500s linear infinite;
+  animation: my-animation 500s linear infinite;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*scrollbar*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f4efd4;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0B0B0B;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f4efd4;
+}
+
+a:link {
+    color: #0B0B0B;
+    background-color: transparent;
+    text-decoration: underline ;
+    text-decoration-style: wavy;
+}
+
+a:visited {
+    color: #0B0B0B;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f4efd4;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:active {
+    color: #0B0B0B;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+/* text */
+div.text-title {
+    font-family: "ChurchwardNewstypeBook-Regular";
+    font-size: 3.125rem;
+    line-height: 52px;
+    color: #0B0B0B;
+    letter-spacing: 0.2px;
+    text-align: left;
+    padding-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+div.text-yp {
+    width: 90%;
+    padding-left: 20%;
+    margin-top: 5%;
+}
+
+div.text-ai {
+    width: 90%;
+    padding-left: 10%;
+    margin-top: 5%;
+}
+
+div.indent {
+  text-indent: 65px;
+}
+
+div.text-caption {
+    font-family: "ChurchwardNewstypeBook-Regular";
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #0B0B0B;
+    width: 95%;
+    padding-left: 50%;
+	  vertical-align: top;
+	  text-align: left;
+    margin-top: 5%;
+}
+div.img-caption {
+    font-family: "ChurchwardNewstypelight-Regular";
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #0B0B0B;
+    width: 60%;
+    margin-left: 20%;
+	  vertical-align: top;
+	  text-align: left;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.head .headline {
+    font-family: "ChurchwardNewstypeBook-Regular";
+    display: block;
+    font-size: 3.125rem;
+    line-height: 52px;
+    color: white;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: calc(50% - 40px);
+    transform: translateY(-50%);
+    animation: color-blend 1.5s infinite;
+}
+@keyframes color-blend {
+  0% {
+    color: #f32521; /*red*/
+  }
+  50% {
+    color: #f4efd4;
+  }
+  100% {
+    color: #0072f7; /*blue*/
+  }
+}
+
+div.container {
+    background-color: #f4efd4;
+    width: 100vw;
+    height: 100vh;
+}
+
+div.left {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4efd4;
+    width: 50vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+	  -webkit-overflow-scrolling: touch;
+}
+
+div.right {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: #0B0B0B;
+    height: 100vh;
+    left: 50vw;
+    top: 0;
+    z-index: 1;
+    overflow-y: auto;
+    overflow: hidden;
+	  -webkit-overflow-scrolling: touch;
+}
+
+#nav-left {
+    font-family: "ChurchwardNewstypeBook-Regular";
+    font-size: 16px;
+    line-height: 20px;
+    position: fixed;
+    justify-content: flex-end;
+    padding: 10px;
+    overflow: auto;
+    top: 0;
+    left: 0%;
+    width: 50%;
+    height: 40px;
+    background-color: #f4efd4;
+    z-index: 999;
+    pointer-events: all;
+}
+
+#nav-right {
+    font-family: "ChurchwardNewstypeBook-Regular";
+    font-size: 16px;
+    line-height: 20px;
+    position: fixed;
+    padding: 10px;
+    overflow: auto;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 40px;
+    background-color: transparent;
+    z-index: 999;
+    pointer-events: all;
+}
+
+#progressBar {
+    background-color: transparent;
+    width: 50%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+}
+
+#progress {
+    background-color:#0B0B0B;
+    height: 40px;
+    display:inline-block;
+    border: none;
+    z-index: -1;
+    opacity: 1;
+}
+
+div.text-nav {
+    font-family: "ChurchwardNewstypeBook-Regular";
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+	  text-align: left;
+    animation: color-change 1.5s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: #f32521;
+  }
+  50% {
+    color: #f4efd4;
+  }
+  100% {
+    color: #0072f7;
+  }
+}
+div.clip {
+    padding: 0px;
+    position: fixed;
+    display: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 16%;
+    height: auto;
+    top: 52vh;
+    left: 32vw;
+    overflow: hidden;
+    pointer-events: all;
+    border-radius: 5px;
+}
+
+video {
+    display: none;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+img {
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    margin-left: 0;
+}
+
+img.static {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    margin-left: 0;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    mix-blend-mode: none; /* multiply */
+    z-index: 3;
+    background-color: #f4efd4;
+    display: block;
+}
+
+.entry-bg {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+    opacity: 0.9;
+    background-color: white;
+}
+
+@media (min-width: 300px) and (max-width: 876px) {
+			#left {
+				width: 100%;
+				height:auto;
+			}
+
+			#right {
+				width: 100%;
+				height: auto;
+			}
+
+			#leftcontent {
+				margin: 15px;
+			}
+
+			#leftbottom {
+				margin: 0 15px 40px 15px!important;
+			}
+
+			#rightcontent {
+				margin: 40px 30px 40px 30px!important;
+			}
+  }
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from {
+    -moz-transform: translateY(0);
+  }
+  to {
+    -moz-transform: translateY(-100%);
+  }
+}
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from {
+    -webkit-transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-100%);
+  }
+}
+@keyframes my-animation {
+  from {
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -moz-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
