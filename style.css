@@ -10,30 +10,30 @@
 }
 
 div.container {
-    background-color: rgb(238, 254, 207);
+    background-color: #EDFF00;
     left: 50vw;
     width: 100vw;
     height: 100vh;
 }
 
 @font-face {
-  font-family: "ChurchwardNewstypeLight-Regular";
-  src: url('assets/webFonts/ChurchwardNewstypeLightRegular/font.woff2') format('woff2'), url('assets/webFonts/ChurchwardNewstypeLightRegular/font.woff') format('woff');
+  font-family: "AS-Condensed-90";
+  src: url('assets/webFonts/AS-Condensed-90.woff2') format('woff2'), url('assets/webFonts/AS-Condensed-90.woff') format('woff');
 }
 
 @font-face {
-  font-family: "ChurchwardNewstypeBook-Regular";
-  src: url('assets/webFonts/ChurchwardNewstypeBookRegular/font.woff2') format('woff2'), url('assets/webFonts/ChurchwardNewstypeBookRegular/font.woff') format('woff');
+  font-family: "AS-Condensed-130";
+  src: url('assets/webFonts/AS-Condensed-130.woff2') format('woff2'), url('assets/webFonts/AS-Condensed-130.woff') format('woff');
 }
+
 
 body {
     background-color: #eaebea;
     color: black;
-    font-family: "ChurchwardNewstypeLight-Regular";
-    font-size: 22px;
-    font-color: #a100ff;
-    letter-spacing: 0.8px;
-    line-height: 1.4;
+    font-family: "AS-Condensed-90", sans-serif;
+    font-size: 48px;
+    letter-spacing: 0.px;
+    line-height: 1.1;
     text-align: left;
     overflow-y: display;
 }
@@ -49,7 +49,7 @@ a:visited {
   text-decoration: none;
 }
 a:hover {
-  color: rgb(238, 254, 207);
+  color: #EDFF00;
   background-color: transparent;
   text-decoration: none;
 }
@@ -69,7 +69,7 @@ div.left {
     flex-direction: column;
     align-items: center;
     background-color: #eaebea;
-    width: 50vw;
+    width: 75vw;
     height: 100vh;
     left: 0;
     top: 0;
@@ -81,31 +81,32 @@ div.right {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
-    width: 50vw;
+    background-color: #EDFF00;
+    width: 25vw;
     height: 100vh;
-    left: 50vw;
+    left: 75vw;
     top: 0;
     overflow-y: overlay;
 }
 
 div.text-yp {
-    margin-top: 5%;
+    margin-top: 2%;
     width: 90%;
     padding-left: 10%;
 }
 
 div.text-ai {
-    margin-top: 5%;
+    margin-top: 2%;
+    margin-bottom: 5%;
     width: 90%;
 }
 
 div.intro {
-    font-family: "ChurchwardNewstypeBook-Regular";
+    font-family: "AS-Condensed-90";
     font-size: 14px;
     color: black;
-    letter-spacing: 0.8px;
-    line-height: 1.3em;
+    letter-spacing: 0px;
+    line-height: 1.1em;
     margin-top: 5%;
     width: 90%;
     padding-left: 15%;
@@ -114,24 +115,25 @@ div.intro {
 }
 
 div.caption {
-    font-family: "ChurchwardNewstypeBook-Regular";
-    font-size: 14px;
-    color: rgb(238, 254, 207);
-    letter-spacing: 0.8px;
-    line-height: 1.3em;
+    font-family: "AS-Condensed-130";
+    font-size: 20px;
+    color: black;
+    letter-spacing: 0px;
+    line-height: 1.1em;
     margin-top: 5%;
     width: 60%;
-    padding-left: 25%;
+    padding-left: 20%;
+    padding-right: 5%;
 	  vertical-align: top;
 	  text-align: left;
 }
 
 
 div.link {
-    font-family: "ChurchwardNewstypeBook-Regular";
+    font-family: "AS-Condensed-90";
     font-size: 14px;
-    letter-spacing: 0.8px;
-    line-height: 1.3em;
+    letter-spacing: 0px;
+    line-height: 1.1em;
     margin-top: 5%;
     width: 60%;
     color: #a100ff;
