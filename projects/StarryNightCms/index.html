@@ -6,13 +6,14 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
         <link rel="stylesheet" href="css/styles.css">
-    
+
         <script src="js/jquery-3.6.0.min.js"></script>
         <script src="js/sheets.js"></script>
         <script src="js/script.js" ></script>
         <style>/*https://docs.google.com/spreadsheets/d/1yAfGL2XQOr1tuk9yWUi3PsGku6cYCGY-UTmtIFR8rQI/edit#gid=2087370746*/</style>
+
     </head>
     <body>
         <div id="container">
@@ -21,7 +22,7 @@
         <div id="intro">
             <div class="title">Starry Night!<br><br>
             These stars generated from Google Calendar: from 05/22/2012 to 06/24/2022 to explore, wander, and search.<br><br>
-            <a href="" target="_blank">Go to Google Sheet</a></div> 
+            <a href="" target="_blank">Go to Google Sheet</a></div>
             <div class="x_button">×</div>
         </div>
         <script>
@@ -50,11 +51,11 @@
                     var offset = container.offset()
                     zoom_point.x = e.pageX - offset.left
                     zoom_point.y = e.pageY - offset.top
-                    
+
                     e.preventDefault();
                     var delta = e.delta || e.originalEvent.wheelDelta;
                     delta = Math.max(-1, Math.min(1, delta))
-                    
+
                     zoom_target.x = (zoom_point.x - pos.x) / scale
                     zoom_target.y = (zoom_point.y - pos.y) / scale
 
@@ -63,7 +64,7 @@
 
                     pos.x = zoom_point.x - zoom_target.x * scale
                     pos.y = zoom_point.y - zoom_target.y * scale
-                    
+
                     if (pos.x > 0){
                         pos.x = 0
                     }
