@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+  font-family: "AS-Condensed-90";
+  src: url('assets/webFonts/AS-Condensed-90.woff2') format('woff2'), url('assets/webFonts/AS-Condensed-90.woff') format('woff');
+}
+
+@font-face {
+  font-family: "AS-Condensed-130";
+  src: url('assets/webFonts/AS-Condensed-130.woff2') format('woff2'), url('assets/webFonts/AS-Condensed-130.woff') format('woff');
+}
+
+textarea {
+    font-family: "AS-Condensed-90", sans-serif;
+    background-color: #ffffff;
+    color: black;
+    font-size: 24px;
+    letter-spacing: 0.px;
+    line-height: 1.2;
+    text-align: left;
+    overflow-y: display;
+}
