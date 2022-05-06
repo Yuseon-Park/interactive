@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Starry Night</title>
+
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <link rel="stylesheet" href="css/styles.css">
+    
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/sheets.js"></script>
+        <script src="js/script.js" ></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="app" class="animate-flicker"></div>
+        </div>
+        <div id="intro">
+            <div class="title">Starry Night!<br><br>
+            These stars generated from Google Calendar: from 05/22/2012 to 06/24/2022 to explore, wander, and search.<br><br>
+            <a href="https://docs.google.com/spreadsheets/d/1yAfGL2XQOr1tuk9yWUi3PsGku6cYCGY-UTmtIFR8rQI/edit#gid=2087370746" target="_blank">Go to Google Sheet</a></div>
+            <div class="x_button">×</div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                var scroll_zoom = new ScrollZoom($('#container'), 105, 0.1)
+            })
+
+            $('#intro').find('.x_button').click(function() {
+                $('#intro').hide()
+            })
+
+            function ScrollZoom(container, max_scale, factor){
+                var target = container.children().first()
+                var size = { w:target.width(), h:target.height() }
+                var pos = { x:-85000, y:-45000 }
+                var zoom_target = { x:0, y:0 }
+                var zoom_point = { x:0, y:0 }
+                var scale = 65.6014
+
+                target.css('transform-origin', '0 0')
+                update()
+                target.on("mousewheel DOMMouseScroll", scrolled)
+
+
+                function scrolled(e){
+                    var offset = container.offset()
+                    zoom_point.x = e.pageX - offset.left
+                    zoom_point.y = e.pageY - offset.top
+                    
+                    e.preventDefault();
+                    var delta = e.delta || e.originalEvent.wheelDelta;
+                    delta = Math.max(-1, Math.min(1, delta))
+                    
+                    zoom_target.x = (zoom_point.x - pos.x) / scale
+                    zoom_target.y = (zoom_point.y - pos.y) / scale
+
+                    scale += delta*factor * scale
+                    scale = Math.max(1, Math.min(max_scale, scale))
+
+                    pos.x = zoom_point.x - zoom_target.x * scale
+                    pos.y = zoom_point.y - zoom_target.y * scale
+                    
+                    if (pos.x > 0){
+                        pos.x = 0
+                    }
+                    if (pos.x + size.w * scale < size.w){
+                        pos.x = -size.w * (scale - 1)
+                    }
+                    if (pos.y > 0){
+                        pos.y = 0
+                    }
+                    if (pos.y + size.h * scale < size.h){
+                        pos.y = -size.h * (scale - 1)
+                    }
+
+                    update()
+                }
+
+
+                function update(){
+                    target.css('transform', 'translate(' + (pos.x) + 'px, ' + (pos.y) + 'px) scale(' + scale + ',' + scale + ')')
+                }
+            }
+        </script>
+    </body>
+</html>
