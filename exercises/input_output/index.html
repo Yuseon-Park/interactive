@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Input-Output</title>
+
+
+<style>
+
+  @font-face {
+    font-family: "AS-Condensed-130";
+    src: url('fonts/AS-Condensed-130.woff2') format('woff2'), url('fonts/AS-Condensed-130.woff') format('woff');
+  }
+  
+  body {
+      background-color: /*#ccf5fe*/;
+      color: #0211ff;
+      font-family: "AS-Condensed-130";
+      font-size: 32px;
+      letter-spacing: 0px;
+      line-height: 1.1;
+      text-align: left;
+      overflow-y: display;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+
+  img {
+        width: 25%;
+      }
+
+#image2{
+  position:absolute;
+  width: 10%;
+  height:10%;
+  top:2%;
+  left:2%;
+}
+
+  .text {
+    display: block;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    color: #0211ff;
+    font-family: "AS-Condensed-130";
+    font-size: 24px;
+    letter-spacing: 0px;
+    line-height: 1;
+    text-align: left;
+  }
+  
+  
+  </style>
+  </head>
+
+
+
+
+  <body>
+
+    <img src="images/cursor.svg" id="image2">
+    <span class=text>Click!</span>
+
+    <!-- Scripts go at the bottom of your <body> element, below your HTML. Here's a link to the jquery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- And here's a link to our javascript, written in an external js file called main.js -->
+    <script src="main.js"></script>
+  </body>
+</html>
