@@ -1,0 +1,202 @@
+
+@font-face {
+  font-family: "AS-Condensed-60";
+  src: url('fonts/AS-Condensed-60.woff2') format('woff2'), url('fonts/AS-Condensed-60.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: "AS-Condensed-90";
+  src: url('fonts/AS-Condensed-90.woff2') format('woff2'), url('fonts/AS-Condensed-90.woff') format('woff');
+}
+
+body{
+	background-color:  #000000;
+  font-family: "AS-Condensed-60", sans-serif;
+	color: white;
+  padding: 0px;
+  margin: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+header{
+  position: absolute;
+  margin-left: 1rem;
+  z-index: +100;
+}
+
+h1{
+  font-size: 1rem;
+  font-weight: normal;
+	text-align: center;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.entry {
+  width: 2px;
+  height: 2px;
+  margin: 2px;
+  border-radius: 50%;
+	background-color: #fefff2;
+	overflow: visible;
+  color: #fefff2;
+  box-shadow: 
+  0 0 0.2em rgb(252, 220, 255), 
+  0 0 0.2em rgb(255, 255, 225), 
+  0 0 0.2em rgb(252, 220, 255);
+  text-shadow: 
+  0.1px 0.1px 1px rgb(255, 255, 255), 
+  0 0 1em rgb(255, 255, 225), 
+  0 0 0em rgb(252, 220, 255);
+}
+
+.entry p {
+  display: none;
+  max-width: 100%;
+  font-size: 0.1rem;
+  line-height: 1;
+}
+
+.entry:hover p {
+  display: block;
+  font-size: 0.1rem;
+  line-height: 1;
+}
+
+.title {
+  font-family: "AS-Condensed-60", sans-serif;
+  margin-bottom: 0.1rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+p {
+  font-family: "AS-Condensed-60", sans-serif;
+  display: block;
+  white-space: nowrap;
+  font-size: 1rem;
+  line-height: 1;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 2px;  
+  margin-inline-end: 0px;
+}
+
+.description, .title {
+  font-family: "AS-Condensed-60", sans-serif;
+  font-size: 0.1rem;
+  line-height: 1;
+	position: relative;
+	visibility: hidden;
+}
+
+.entry:hover .description {
+	visibility: visible;
+  padding-top: 0.1rem;
+  font-size: 0.1rem;
+  line-height: 1;
+  z-index: +100;
+}
+
+.entry:hover .title {
+	visibility: visible;
+  margin-bottom: 0.1rem;
+  font-size: 0.1rem;
+  line-height: 1;
+  z-index: +100;
+}
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0.9; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0.9; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0.9; }
+  100% { opacity:1; }
+
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0.9; }
+  100% { opacity:1; }
+
+}
+.animate-flicker {
+   -webkit-animation: flickerAnimation .5s infinite;
+   -moz-animation: flickerAnimation .5s infinite;
+   -o-animation: flickerAnimation .5s infinite;
+    animation: flickerAnimation .5s infinite;
+}
+
+
+a {
+  color: #fefff2;
+}
+
+#intro {
+  position: fixed;
+  font-family: "AS-Condensed-90", sans-serif;
+  z-index: 100000;
+  width: 15%;
+  background: #fefff2;
+  right: 5%;
+  top: 60vh;
+  padding: 0.5vh;
+  box-shadow: 
+  0 0 5em rgb(252, 220, 255), 
+  0 0 5em rgb(255, 255, 225), 
+  0 0 5em rgb(255, 255, 225), 
+}
+
+.title {
+  width: 100%;
+  font-family: "AS-Condensed-90", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  visibility: visible;
+  color: black;
+}
+
+.intro div, a, span {
+  text-decoration: none !important;
+  font-family: "AS-Condensed-90", sans-serif;
+  margin: 0;
+  color: black !important;
+  letter-spacing: 0.02vh;
+}
+
+.x_button {
+  color: black;
+  font-size: 1.1rem;
+  right: 0.5vw;
+  top: 0vh;
+  display: block;
+  position: absolute;
+  border-radius: 0vh;
+  cursor: pointer;
+  /*background-image: url(../pics/x_img.png);*/
+}
+
+
+/*#fefff2*/
