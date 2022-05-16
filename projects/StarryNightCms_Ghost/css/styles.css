@@ -50,14 +50,16 @@ h1{
   width: 2px;
   height: 2px;
   margin: 2px;
-  border-radius: 50%;
-	background-color: #fefff2;
+  /* border-radius: 50%; */
+  background-image: url(../css/pics/ghostparticle-white.svg);
+	/* background-color: #fefff2; */
+  background-color: #000000;
 	overflow: visible;
   color: #fefff2;
-  box-shadow: 
+  /* box-shadow: 
   0 0 0.2em rgb(252, 220, 255), 
   0 0 0.2em rgb(255, 255, 225), 
-  0 0 0.2em rgb(252, 220, 255);
+  0 0 0.2em rgb(252, 220, 255); */
   text-shadow: 
   0.1px 0.1px 1px rgb(255, 255, 255), 
   0 0 1em rgb(255, 255, 225), 
@@ -158,7 +160,7 @@ a {
   position: fixed;
   font-family: "AS-Condensed-90", sans-serif;
   z-index: 100000;
-  width: 15%;
+  width: 25%;
   background: #fefff2;
   right: 5%;
   top: 60vh;
